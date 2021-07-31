@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 style="display: flex; justify-content: center; ">FAQ?</h1>
+    <div id='app'></div>
+</body>
+<script src="FAQ.js"></script>
+
+<script>
+    console.log("hello");
+    const app = document.getElementById('app')
+
+    const faq1 = new FAQ('What kind of payment do you support?', 'We support credit card, Paypal and Stripe')
+    const faq2 = new FAQ('Do you support free delivery?', 'Yes')
+    const faq3 = new FAQ('What your warranty policy?', '24 months')
+
+    app.appendChild(faq1.render())
+    app.appendChild(faq2.render())
+    app.appendChild(faq3.render())
+</script>
+
+</html>
