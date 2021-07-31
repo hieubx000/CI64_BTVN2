@@ -10,7 +10,7 @@
 
 <body>
     <h1 style="display: flex; justify-content: center; ">FAQ?</h1>
-    <div id='app'></div>
+    <div id='app' style="text-align: center;"></div>
 </body>
 <script src="FAQ.js"></script>
 
@@ -22,6 +22,17 @@
     const faq2 = new FAQ('Do you support free delivery?', 'Yes')
     const faq3 = new FAQ('What your warranty policy?', '24 months')
 
+
+
+    const btnAdd = document.createElement("button")
+    btnAdd.innerHTML = "Add questions";
+    btnAdd.addEventListener('click', () => {
+        const qs = prompt("Enter question")
+        const as = prompt("Enter your answer")
+        const faq = new FAQ(qs, as)
+        app.appendChild(faq.render())
+    })
+    app.appendChild(btnAdd)
     app.appendChild(faq1.render())
     app.appendChild(faq2.render())
     app.appendChild(faq3.render())
